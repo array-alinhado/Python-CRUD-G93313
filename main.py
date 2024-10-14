@@ -22,8 +22,6 @@ from sqlalchemy.orm import sessionmaker, declarative_base
 MEU_BANCO = create_engine("sqlite:///meubanco.db")
 
 
-# criando database meubanco;
-
 
 # Criando conexão com banco de dados.
 Session = sessionmaker(bind=MEU_BANCO)
@@ -49,7 +47,7 @@ class Usuario(Base):
         self.email = email
         self.senha = senha
 
-#Criando tabela no bancond de dados.
+#Criando tabela no bancon de dados.
 Base.metadata.create_all(bind=MEU_BANCO)
 # salvando...
 usuario = Usuario("carlos", "carlos69@gamail.com", "696969" )
